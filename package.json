@@ -1,0 +1,29 @@
+{
+  "name": "mongodb-super-util",
+  "version": "1.0.0",
+  "description": "A collection of utilities for MongoDB",
+  "repository": "https://github.com/agent-ly/mongodb-super-util",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./collection_set": "./dist/collection_set.js",
+    "./document_lock": "./dist/document_lock.js",
+    "./task_manager": "./dist/task_manager.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "mongodb": "^5.2.0",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "mongodb": "^5.0.0"
+  },
+  "packageManager": "pnpm@8.0.0"
+}
